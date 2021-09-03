@@ -1,2 +1,2 @@
-export * from "./expect.ts";
-export * as T from "./test.ts";
+export * from "./src/expect.ts";
+export * as T from "./src/test.ts";
