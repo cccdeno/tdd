@@ -38,9 +38,16 @@ Deno.test("expect", () => {
 ## Test
 
 ```
-$ deno test bdd_test.js
-running 1 test from file:///C:/ccc/course/sa/js/package/tdd/example/bdd_test.js
-test expect ... ok (18ms)
+$ deno test tdd_test.ts
+running 1 test from file:///C:/ccc/code/deno/my/package/tdd/example/tdd_test.ts
+test TDD ... ok (14ms)
 
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out (94ms)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out (89ms)
+
+
+$ deno test bdd_test.ts
+running 1 test from file:///C:/ccc/code/deno/my/package/tdd/example/bdd_test.ts
+test BDD ... ok (9ms)
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out (75ms)
 ```

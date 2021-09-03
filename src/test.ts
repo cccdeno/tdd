@@ -1,8 +1,12 @@
-import { assertEquals, equal } from "https://deno.land/std/testing/asserts.ts";
+import { assertEquals, equal, assert } from "https://deno.land/std/testing/asserts.ts";
 export * from "https://deno.land/std/testing/asserts.ts";
 
 export var eq = assertEquals
 export var isEq = equal
+
+export function ok(cond:boolean) {
+  return assert(cond);
+} 
 
 export function isNear(a:number,b:number,delta:number=0.001) {
   return (Math.abs(a-b) < delta)
