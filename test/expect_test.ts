@@ -1,4 +1,4 @@
-import {expect} from '../src/expect.ts'
+import {expect} from '../mod.ts'
 
 Deno.test("expect", () => {
   expect(3).equal(3)

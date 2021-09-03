@@ -1,5 +1,5 @@
-import { assertEquals, equal } from "https://deno.land/std@0.63.0/testing/asserts.ts";
-export * from "https://deno.land/std@0.63.0/testing/asserts.ts";
+import { assertEquals, equal } from "https://deno.land/std/testing/asserts.ts";
+export * from "https://deno.land/std/testing/asserts.ts";
 
 export var eq = assertEquals
 export var isEq = equal

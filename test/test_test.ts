@@ -1,4 +1,4 @@
-import * as T from '../src/test.ts'
+import * as T from '../mod.ts'
 
 Deno.test("test", () => {
   T.isNear(3.01, 3)

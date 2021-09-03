@@ -1,6 +1,6 @@
 import { expect } from 'https://deno.land/x/tdd/mod.ts'
 
-Deno.test("expect", () => {
+Deno.test("BDD", () => {
   expect(3).equal(3)
   expect(3).not.equal(4)
   expect('hello world!').contain('world')
