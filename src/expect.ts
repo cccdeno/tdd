@@ -1,4 +1,4 @@
-import {isEq, isNear, isType, isMember} from "./test.ts";
+import * as T from "./test.ts";
 
 export class Expect {
   o: any
@@ -35,28 +35,27 @@ export class Expect {
   }
 
   equal(o:any) {
-    if (this.check(isEq(this.o, o))) return this
+    if (this.check(T.isEq(this.o, o))) return this
     throw Error('Expect.equal fail!')
   }
 
   near(n:number, gap:number=0.001) {
-    if (this.check(isNear(this.o, n, gap))) return this
+    if (this.check(T.isNear(this.o, n, gap))) return this
     throw Error('Expect.near fail!')
   }
 
   type(type:any) { 
-    if (this.check(isType(this.o, type))) return this
+    if (this.check(T.isType(this.o, type))) return this
     throw Error('Expect.type fail!')
   }
 
   a(type:any) {
-    if (this.check(isType(this.o, type) || isEq(this.o, type))) return this
+    if (this.check(T.isType(this.o, type) || T.isEq(this.o, type))) return this
     throw Error('Expect.a fail!')
   }
 
   contain(member:any) {
-    let m = isMember(this.o, member)
-    if (this.check(m != null)) { this.o = m; return this }
+    if (T.isContain(this.o, member)) return this
     throw Error('Expect.contain fail!')
   }
 
