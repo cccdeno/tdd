@@ -6,4 +6,5 @@ Deno.test("expect", () => {
   expect('hello world!').contain('world')
   expect(3).is.a('number')
   expect([1,2,3]).is.a(Array)
+  expect(3).fail(()=>{ throw Error()})
 })

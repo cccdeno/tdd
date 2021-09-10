@@ -53,3 +53,17 @@ export function member(o: any, set: any) {
 export function contain(set: any, o: any) {
   ok(isContain(o, set))
 }
+
+export function isFail(f:(...args:any)=>any, args:any[]) {
+  try {
+    f(args);
+    return false
+  } catch (e) {
+    return true
+  }
+}
+
+export function fail(f:()=>any, ...args:any[]) {
+  if (!isFail(f, args)) throw Error(args.toString())
+}
+

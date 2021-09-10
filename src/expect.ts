@@ -59,6 +59,11 @@ export class Expect {
     throw Error('Expect.contain fail!')
   }
 
+  fail(f:(...args:any[])=>any, ...args:any[]) {
+    if (T.isFail(f, [this.o, ...args])) return this
+    throw Error('Expect.contain fail!')
+  }
+
   get not() {
     this.isNot = !this.isNot
     return this
